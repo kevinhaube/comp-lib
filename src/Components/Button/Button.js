@@ -30,6 +30,7 @@ function Button(props) {
         font-weight: 500;
         letter-spacing: .5px;
         text-transform: uppercase;
+        white-space: nowrap;
 
         transition: 150ms;
 

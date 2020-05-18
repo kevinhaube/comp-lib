@@ -9,7 +9,10 @@ function Surface(props) {
     //TODO: Customization through props
 
     const Surface = styled.div`
+        width: ${props.width};  
+        max-width: 100%;
         display: inline-flex;
+        flex-wrap: wrap;
         background-color: #fff;
         border-radius: 10px;
         padding: 1rem;
@@ -24,12 +27,12 @@ function Surface(props) {
 
 // Defined prop types
 Surface.propTypes = {
-    
+    width: PropTypes.string
 }
 
 // Defined default props
 Surface.defaultProps = {
-    
+
 }
 
 export default Surface
