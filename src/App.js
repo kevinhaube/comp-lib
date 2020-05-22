@@ -4,10 +4,11 @@ import Button from "./Components/Button/Button";
 import Surface from "./Components/Surface/Surface";
 import Text from "./Components/Typography/Text";
 import Badge from "./Components/Badge/Badge";
+import Card from "./Components/Card/Card";
 
 import CloseIcon from "@material-ui/icons/Close";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
-import { Icon } from "@material-ui/core";
+import CardHeader from "./Components/Card/CardHeader";
 
 function App() {
   const primary = "#e524af";
@@ -15,7 +16,6 @@ function App() {
 
   const Section = styled.div`
     height: 100%;
-    width: 100%;
     display: inline-flex;
     flex-direction: ${(props) => props.direction || "row"};
     justify-content: center;
@@ -32,7 +32,8 @@ function App() {
         alignItems: "center",
       }}
     >
-      <Surface>
+      {/* Buttons */}
+      <Surface style={{ flexDirection: "column" }}>
         <Section direction="column">
           <Text variant="h3">Buttons</Text>
           <Text
@@ -52,7 +53,8 @@ function App() {
         </Section>
       </Surface>
 
-      <Surface>
+      {/* Typography */}
+      <Surface style={{ flexDirection: "column" }}>
         <Section direction="column">
           <Text variant="h3">Typography</Text>
           <Text
@@ -96,7 +98,8 @@ function App() {
         </Section>
       </Surface>
 
-      <Surface style={{ maxWidth: "550px" }}>
+      {/* Badges */}
+      <Surface style={{ maxWidth: "550px", flexDirection: "column" }}>
         <Section direction="column">
           <Text variant="h3">Badges</Text>
           <Text
@@ -176,6 +179,30 @@ function App() {
             Small
           </Badge>
         </Section>
+      </Surface>
+
+      {/* Cards */}
+      <Surface style={{ flexDirection: "column" }}>
+        <Section direction="column">
+          <Text variant="h3">Cards</Text>
+          <Text
+            variant="caption"
+            style={{ color: primary, paddingLeft: "2px" }}
+          >
+            In Dev
+          </Text>
+        </Section>
+        <Card>
+          <CardHeader>
+            {"Card Title"}
+            {"Subtitle"}
+          </CardHeader>
+          <Text style={{ marginTop: "1rem" }}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacus
+            turpis, aliquet quis porttitor vel, laoreet ut eros. Donec eget
+            turpis purus.
+          </Text>
+        </Card>
       </Surface>
     </div>
   );
