@@ -15,6 +15,7 @@ function Badge(props) {
     border-radius: 500px;
     white-space: nowrap;
 
+    font-family: Roboto;
     font-weight: 500;
     text-transform: uppercase;
     user-select: none;
