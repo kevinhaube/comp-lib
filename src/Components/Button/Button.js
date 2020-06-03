@@ -63,7 +63,7 @@ function Button(props) {
 
 // Defined prop types
 Button.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.string.isRequired,
   color: PropTypes.string,
   disabled: PropTypes.bool,
   type: PropTypes.oneOf(["outlined", "filled"]),
